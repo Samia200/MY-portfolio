@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+i{
+    color: #000;
+    padding: 0 5px;
+    text-decoration: none;
+  font-size: 13px;
+  cursor: pointer;
+
+  }
+  ul li{
+    list-style: none;
+    cursor: pointer;
+
+  }
+nav{
+    position: fixed;
+    background-color: white;
+    padding: 5px ;
+    border-radius: 5px;
+    top: 10%;
+    left: 4%;
+}
+nav i{
+    font-size: 18px;
+}
+nav a {
+    display: block;
+}
+nav ul li{
+    padding: 35px 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+font-size: 13px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.192) ;
+}
+nav ul li:hover a ,nav ul li:hover i {
+    color: #4482C1;
+}
+
+nav ul li:nth-child(4){
+    border-bottom: none ;
+ 
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -5;
+    background: linear-gradient(to bottom right, #4482C1 0%, #ABC7E3 100%);
+}
+.squere{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ABC7E357;
+    animation: rotate  40s ease-in-out  infinite ;
+    top: 120%;
+    transition: top 60s ease-in-out;
+}
+.squeretop{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ABC7E357;
+    animation: rotatetop  30s ease-in-out  infinite ;
+    top: -20%;
+    left: 20%;
+    transition: top 60s ease-in-out;
+}
+.tow{
+    width: 160px;
+    height: 160px;
+    left: 50%;
+}
+.three{
+    width: 190px;
+    height: 190px;
+    left: 69%; 
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg) ;
+        top: -20%;
+    }
+}
+@keyframes rotatetop {
+    to{
+        transform: rotate(360deg) ;
+        top: 120%;
+    }
+}
+
+/*********************** bg section end *************************/
+.main{
+    width: 35%;
+    height: 83vh;
+    position: absolute;
+    top: 7%;
+    z-index: 20;
+    left: 12%;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: -6px -7px 0 4px #6699CC;
+}
+.img{
+    border-radius: 6px;
+     box-shadow: rgba(27, 27, 27, 0.616) 3px 3px 2px 5px;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    background-color: #CDDEEE;
+    clip-path: polygon(0 0, 100% 0%, 100% 77%, 53% 100%, 0 77%);
+}
+.img img{
+  width: 80%;
+}
+.info {
+    width: 100%;
+    height: 50%;
+    padding-top: 15px;
+    color: black;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+  }
+  .info h1{
+    font-size: 24px;
+    color: #323232;
+  }
+  .info h4{
+    color: #4482C1;
+    font-weight: 300;
+  }
+  .link-btn{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
+    padding:  15px 0;
+    border-top: #4482C1ae 1px solid;
+  }
+  .link-btn a:nth-child(2){
+    padding-left: 3rem;
+    border-left:#4482C1ae 1px solid ;
+  }
+  .icons{
+    margin: 10px 0;
+  }
+
+
+ /************************** main section end*************************/
+ .card{
+    font-family: 'Poppins', sans-serif;
+    width: 50%;
+    height: 75vh;
+    padding:2rem;
+    background-color: white;
+    position: absolute;
+    overflow: auto;
+    left: 47%;
+    top: 11%;
+    z-index: -2;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 7s ease;
+    transition: 1s margin-left ease;
+  margin-left: calc(-26% - 100px);
+ }
+
+ .card.active {
+    z-index: 10;
+    margin-left: 0;
+    opacity: 1;
+  }
+ .card h1{
+    font-size: 18px ;
+    font-weight: 400;
+    margin: 1rem 0;
+ }
+ .card h1 span{
+    color: #4482C1;
+ }
+ .card h1::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+    left: 22px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #4482C136 0%, #4482C100 100%);
+
+ }
+ .info-c{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1rem;
+    margin: 1rem 0;
+ }
+ .line-info{
+    width: 1px;
+    height: 10rem;
+    margin-top: -1.1rem;
+    background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.4) 5% ,#00000000);
+ }
+ .info-c p{
+    width: 45%;
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0 0 25px 0;
+    color: #646464;
+ }
+ .aboutme{
+    width: 250px;
+    margin-bottom: 2rem;
+ }
+ .aboutme li{
+    justify-content: space-between;
+    display: flex;
+ }
+ hr{
+    background: linear-gradient(to right, #00000019, rgba(0, 0, 0, 0.486) ,#00000019);
+    margin: 20px;
+    height: 1px;
+    border: none;
+ }
+ .info-c ul li span{
+    background-color: #4482C1;
+    padding: 2px 7px ;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+ }
+ .services{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .service{
+
+    text-align: center;
+ }
+ .service h3{
+    font-size: 18px ;
+    font-weight: 400;
+    margin: 1rem 0;
+ }
+ .service p{  
+    width: 100%;
+ }
+ .service  i , .pricing i{
+    background-color: #4482C1;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+ }
+ .pricing h3{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0;
+ }
+ .pricing h5{
+    font-weight: 300;
+    margin-bottom: 1rem;
+ }
+ 
+ .pricing ul li{
+    color: #646464;
+font-size: 14px;
+line-height: 40px;
+ }
+ .pricing h5 strong{
+   line-height: 2rem;
+    font-size: 28px;
+ }
+ .pricing{
+  text-align: center;
+   
+ }
+@media screen and (max-width: 1099px) {
+    .main{
+        width: 75%;height: 105%;
+        top: 7%;
+        left: 20%;
+    }
+    .card{
+        width: 75%;
+        padding:2rem;
+        left: 20%;
+        top: 114%;
+        z-index: -2;
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity 7s ease;
+        transition: 1s margin-left ease;
+         margin-left: 0;
+     }
+    
+     .card.active {
+        z-index: 10;
+        margin-left: 0;
+        opacity: 1;
+      }
+      .img img{
+        width: 50%;
+      }
+}
+@media screen and (max-width: 890px){
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    nav ul li{
+        border-bottom: none;
+        padding: 15px ;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .main{
+        width: 100%;height: 450px;
+        top: 8%;
+        left: 0;
+        border-radius: 0;
+    }
+    .info h1{
+        font-size: 19px;
+        color: #323232;
+      }
+    .card{
+        width: 100%;
+        padding:1rem;
+        left: 0;
+        top: 78%;
+        z-index: -2;
+       
+     }
+     .img img{
+        width: 60%;
+      }
+     .card.active {
+        z-index: 10;
+        margin-left: 0;
+        opacity: 1;
+      }
+      .info-c{
+        display: flex;
+        flex-direction: column;    
+        
+     }
+     .line-info , .line{
+        display: none;
+     }
+     .info-c p{
+        width: 100%;
+     }
+     .info-c img{
+        display: none;
+     }
+     #contact iframe{
+        margin-left: 0;
+     }
+}
+
+/************************* resume section *********************/
+#resume > .info-c{  
+    gap: 3rem;
+ }
+#resume > .info-c h5{
+    font-size: 24px;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+#resume > .info-c h5 i{
+    font-size: 20px;
+color: #4482C1;
+}
+
+/********************** resume section => eduction & experience **********************/
+.expe h4 , .educt h4{
+    font-size: 13px;
+    font-weight: 300;
+}
+.expe h3 , .educt h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.expe h6 , .educt h6{
+    font-size: 13px;
+    font-weight: 300;
+    color: #646464;
+}
+.expe p , .educt p{
+    font-size: 13px;
+    font-weight: 500;
+    width: 100%;
+    color: #646464;
+}
+/********************** resume section => skills **********************/
+.skills{
+    flex-direction: column;
+}
+.range-col h6{
+    font-size: 15px;
+    font-weight: 300;
+    color: #646464; 
+}
+.range{
+    margin: 10px 0;
+    width: 80%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #a9a9a9;
+    box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.range::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #4482C1; 
+}
+.html::after{ 
+    width: 70%; 
+}
+.css::after{ 
+    width: 70%; 
+}
+.js::after{ 
+    width: 66%; 
+}
+.jquery::after{ 
+    width: 65%; 
+}
+.figma::after{ 
+    width: 40%; 
+}
+/********************** resume section => language & knowledge **********************/
+.langs{
+    margin: 0 2rem;
+}
+.lang h6{
+    font-size: 15px;
+    font-weight: 300;
+    color: #646464;  
+}
+.lang div{
+    display: inline-block;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background-color: #acacac;
+    box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.lang div::after{
+    content: "";
+    position: absolute;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+    background-color: #4482C1;
+}
+
+.english .seven::after , .english .six::after , .english .five::after{
+display: none;
+}
+.frensh .seven::after , .frensh .six::after , .frensh .five::after , .frensh .four::after{
+    display: none;
+}
+.line{
+    width: 1px;
+    height: 19rem;
+    margin-top: 1rem;
+    background: linear-gradient(to bottom, #00000010, rgba(0, 0, 0, 0.3) ,#00000010);
+}
+.knowledge , .language{
+    width: 53%;
+}
+.knowledge h6{
+    font-size: 15px;
+    font-weight: 300;
+    color: #646464;  
+    line-height: 4rem;
+}
+.knowledge h6 i{
+    color: #4482C1;
+    font-size: 18px;
+    margin-right: 10px;
+}
+/********************** cases @**************************/
+
+.case{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+}
+
+.vedio{
+    border: #4482C1a5 2px solid;
+    width: 250px;
+height: auto;
+transition: width ease-in-out 1s ;
+}
+
+.vedio video{
+    width: 100%;
+}
+.recent-work h3{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.recent-work h3 span{
+     margin-left: 1rem;
+    font-size: 10px;
+    color: #898787;
+}
+
+.watch{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#contact .info-list img {
+width: 100%;
+}
+#contact .info-list{
+    display: flex;
+    align-items: center;
+}
+#contact iframe{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
