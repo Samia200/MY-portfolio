@@ -337,7 +337,7 @@ line-height: 40px;
     .main{
           position: relative;
         width: 100%;height: 450px;
-         margin-top: 10%;
+         margin-top: 20%;
         left: 0;
         border-radius: 0;
     }
@@ -349,7 +349,7 @@ line-height: 40px;
         width: 100%;
         padding:1rem;
         left: 0;
-       top: 78%;
+       top: 80%;
         z-index: -2;
        
      }
